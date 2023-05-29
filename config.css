@@ -9,8 +9,8 @@
     --palette-0: #001122;
     --palette-0-triplet: 0, 17, 34;
     /* Note: --palette-1 is 1st most satulighted color of the bottom half of the wallpaper which is contrast enough (50%) against the primary color. */
-    --palette-1: #ffccdd;
-    --palette-1-triplet: 255, 180, 200;
+    --palette-1: #ddfaff;
+    --palette-1-triplet: 221, 250, 255	;
     /* Note: --palette-2 is 4th most frequent color of the bottom half of the wallpaper which is distant enough (10%) and hue-distant enough (30°) from all other palette colors. */
     --palette-2: #555588;
     --palette-2-triplet: 85, 85, 136;
