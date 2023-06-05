@@ -1,42 +1,103 @@
+/* @see https://chat.openai.com/share/50b96a9d-82e6-415a-af81-e626c844bc26 */
+
 /* Styles for the pricing table */
-
-
 table {
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+  margin-top: 40px;
+}
+
+
+
+
+thead th {
+  background-color: var(--palette-2);
+  color: var(--palette-1);
+  font-weight: bold;
+  padding: 15px;
+  text-align: left;
+  border-bottom: 1px solid  var(--palette-1);
+}
+
+tbody th {
+  background-color: var(--palette-2);
+  color: var(--palette-1);
+  font-weight: bold;
+  padding: 15px;
+  text-align: left;
+  border-bottom: 1px solid  var(--palette-1);
+}
+
+tbody tr td:first-child {
+ text-align: right;
+ font-weight: bold;
+}
+
+tbody td {
+  padding: 15px;
+  text-align: center;
+  border-bottom: 1px solid  var(--palette-1);
+  vertical-align: top;
+}
+
+table tr td:not(:last-child) {
+  border-right: 1px solid  var(--palette-1);
+}
+
+tfoot th {
+  background-color: #f5f5f5;
+  color: var(--palette-1);
+  font-weight: bold;
+  padding: 15px;
+  text-align: left;
+}
+
+/* Styles for footnotes */
+sup {
+  font-size: 0.7em;
+  vertical-align: super;
+  color: rgba(var(--palette-1-triplet), 0.5);
+}
+
+/* Mobile styles */
+/*
+@media screen and (max-width: 767px) {
+  table {
     width: 100%;
-    border-collapse: collapse;
+    display: block;
   }
-  
-  thead th {
-    background-color: #f5f5f5;
-    color: #333;
-    font-weight: bold;
-    padding: 10px;
-    text-align: left;
-    border-bottom: 1px solid #ccc;
+
+  thead {
+    display: none;
   }
-  
-  tbody th {
-    font-weight: bold;
-    padding: 10px;
-  }
-  
+
+  tbody th,
   tbody td {
-    padding: 10px;
+    display: block;
     text-align: center;
-    border-bottom: 1px solid #ccc;
   }
-  
-  tfoot th {
+
+  tbody th {
     background-color: #f5f5f5;
-    color: #333;
+    color: var(--palette-1);
     font-weight: bold;
-    padding: 10px;
-    text-align: left;
   }
-  
-  /* Styles for footnotes */
-  sup {
-    font-size: 0.8em;
-    vertical-align: super;
+
+  tbody td {
+    border: none;
+    border-bottom: 1px solid  var(--palette-1);
   }
-  
+
+  tbody td:before {
+    content: attr(data-label);
+    font-weight: bold;
+    display: block;
+    padding: 10px 0;
+  }
+
+  tfoot {
+    display: none;
+  }
+}
+*/
