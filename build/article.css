@@ -32,12 +32,8 @@
     }
 }
 
-.Article h2,
-.Article > div {
-    margin-top: 60px;
-}
-
 .Article h2 {
+    margin-top: 60px;
     font-size: 29px;
 
     padding: 0;
@@ -51,12 +47,24 @@
     border-bottom: 1.5px solid var(--palette-2);
 }
 
+.Article p,
+.Article ol,
+.Article ul,
+.Article hr,
+.Article blockquote,
+.Article iframe,
+.Article table,
+.Article img {
+    margin-top: 50px;
+}
+
 .Article p {
     text-align: left;
 }
 
 .Article ol,
 .Article ul {
+    text-align: left;
     margin-left: 50px;
     margin-bottom: 50px;
 }
@@ -67,8 +75,8 @@
     list-style-type: decimal;
 }
 .Article hr {
-    margin-top: 50px;
-    margin-bottom: 50px;
+    /*margin-top: 50px;
+    margin-bottom: 50px;*/
     background-color: var(--palette-2);
     height: 2px;
     border: none;
@@ -90,6 +98,7 @@
 
 .Article blockquote p {
     text-align: center;
+    margin-top: 0;
 }
 
 .Article blockquote hr {
@@ -104,3 +113,7 @@
     width: 100%;
     aspect-ratio: 3/2;
 }
+
+/*
+TODO: !!! Transfer back to AiAi
+*/

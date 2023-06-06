@@ -5,6 +5,8 @@
  *          2. Chage config style NOT common style
  */
 
+@import url(https://fonts.googleapis.com/css2?family=Barlow+Condensed&display=swap);
+
 .ͼ1.cm-focused {
     outline: 1px dotted #212121;
 }
@@ -2180,8 +2182,6 @@ body[data-color-mode*='light'] {
         border-radius: 0;
     }
 }
-
-@import url(https://fonts.googleapis.com/css2?family=Barlow+Condensed&display=swap});
 
 /* https://ai.hejny.org/_next/static/css/0d3190140b8c9433.css */
 
