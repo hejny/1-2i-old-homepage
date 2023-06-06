@@ -2,62 +2,59 @@
 
 /* Styles for the pricing table */
 table {
-  width: 100%;
-  border-collapse: collapse;
-  border-spacing: 0;
-  margin-top: 40px;
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;
+    margin-top: 40px;
 }
 
-
-
-
 thead th {
-  background-color: var(--palette-2);
-  color: var(--palette-1);
-  font-weight: bold;
-  padding: 15px;
-  text-align: left;
-  border-bottom: 1px solid  var(--palette-1);
+    background-color: var(--palette-2);
+    color: var(--palette-1);
+    font-weight: bold;
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid var(--palette-1);
 }
 
 tbody th {
-  background-color: var(--palette-2);
-  color: var(--palette-1);
-  font-weight: bold;
-  padding: 15px;
-  text-align: left;
-  border-bottom: 1px solid  var(--palette-1);
+    background-color: var(--palette-2);
+    color: var(--palette-1);
+    font-weight: bold;
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid var(--palette-1);
 }
 
 tbody tr td:first-child {
- text-align: right;
- font-weight: bold;
+    text-align: right;
+    font-weight: bold;
 }
 
 tbody td {
-  padding: 15px;
-  text-align: center;
-  border-bottom: 1px solid  var(--palette-1);
-  vertical-align: top;
+    padding: 15px;
+    text-align: center;
+    border-bottom: 1px solid var(--palette-1);
+    vertical-align: top;
 }
 
 table tr td:not(:last-child) {
-  border-right: 1px solid  var(--palette-1);
+    border-right: 1px solid var(--palette-1);
 }
 
 tfoot th {
-  background-color: #f5f5f5;
-  color: var(--palette-1);
-  font-weight: bold;
-  padding: 15px;
-  text-align: left;
+    background-color: #f5f5f5;
+    color: var(--palette-1);
+    font-weight: bold;
+    padding: 15px;
+    text-align: left;
 }
 
 /* Styles for footnotes */
 sup {
-  font-size: 0.7em;
-  vertical-align: super;
-  color: rgba(var(--palette-1-triplet), 0.5);
+    font-size: 0.7em;
+    vertical-align: super;
+    color: rgba(var(--palette-1-triplet), 0.5);
 }
 
 /* Mobile styles */
