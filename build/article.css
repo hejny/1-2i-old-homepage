@@ -1,6 +1,29 @@
+main {
+    /*/
+    outline: 1px dotted red;
+    /**/
+
+    display: block;
+    width: 100%;
+    overflow-x: auto;
+}
+
 .Article {
+    /*/
+    outline: 1px dotted blue;
+    /**/
+
     text-align: center;
 }
+
+.Article .scroller {
+    /*/
+    outline: 1px dotted blue;
+    /**/
+    width: 100%;
+    overflow-x: auto;
+}
+
 .Article h1,
 .Article h2,
 .Article h3,
