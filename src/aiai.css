@@ -7,8 +7,13 @@
 
     /*pointer-events: none;*/
 
+/*
     width: 375px;
     height: 667px;
+*/
+
+width: 100%;
+aspect-ratio: 375 / 667;
 
     transform: scale(0.8) perspective(1000px) rotateY(15deg);
     transition: all 0.2s ease-in-out;
