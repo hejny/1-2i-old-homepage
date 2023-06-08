@@ -13,10 +13,10 @@
 */
 
 width: 100%;
-margin: -25px;
-aspect-ratio: 1 / 1 /* 667 / 375 */;
+margin: 0;
+aspect-ratio: 1 / 1 ;
 
-    transform: scale(0.9) perspective(1000px) rotateY(45deg);
+    transform: scale(0.9);
     transition: all 0.2s ease-in-out;
 
     /*box-shadow: 0 0 50px rgba(126, 126, 126, 0.452);*/
@@ -25,5 +25,5 @@ aspect-ratio: 1 / 1 /* 667 / 375 */;
 }
 
 .device:hover {
-    transform: scale(1) perspective(1000px);
+    transform: scale(1);
 }
