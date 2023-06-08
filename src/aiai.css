@@ -14,7 +14,7 @@
 
 width: 100%;
 margin: -25px;
-aspect-ratio: 667 / 375;
+aspect-ratio: 1 / 1 /* 667 / 375 */;
 
     transform: scale(0.8) perspective(1000px) rotateY(15deg);
     transition: all 0.2s ease-in-out;
