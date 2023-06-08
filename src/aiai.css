@@ -13,10 +13,10 @@
 */
 
 width: 100%;
-margin: 0;
-aspect-ratio: 1 / 1; /* ⏹ a perfect square */
+/*margin: 0;*/
+aspect-ratio: 1 / 1 ;
 
-    transform: scale(0.9);
+    /*transform: scale(0.9);*/
     transition: all 0.2s ease-in-out;
 
     /*box-shadow: 0 0 50px rgba(126, 126, 126, 0.452);*/
@@ -24,6 +24,8 @@ aspect-ratio: 1 / 1; /* ⏹ a perfect square */
     /* TODO: !!! Consistent perspective */
 }
 
+/*
 .device:hover {
     transform: scale(1);
 }
+*/
