@@ -1,31 +1,45 @@
-.device {
+*[data-aiai='gallery'] {
     /*/
-    border: 1px dotted red;
+    outline: 1px dotted red;
     /**/
 
-    /* Mobile size viewport in 3D space*/
+    width: 100%;
 
-    /*pointer-events: none;*/
-
-/*
-    width: 375px;
-    height: 667px;
-*/
-
-width: 100%;
-/*margin: 0;*/
-aspect-ratio: 1 / 1 ;
-
-    /*transform: scale(0.9);*/
-    transition: all 0.2s ease-in-out;
-
-    /*box-shadow: 0 0 50px rgba(126, 126, 126, 0.452);*/
-
-    /* TODO: !!! Consistent perspective */
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 5px;
 }
 
-/*
-.device:hover {
-    transform: scale(1);
+*[data-aiai='gallery'] > * {
+    /*/
+    outline: 1px dotted rgb(0, 255, 55);
+    /**/
+
+    width: 100%;
+    aspect-ratio: 1;
 }
-*/
+
+*[data-aiai='gallery'] a {
+    /*/
+    outline: 1px dotted rgb(28, 80, 28);
+    /**/
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    overflow: clip;
+}
+
+*[data-aiai='gallery'] a iframe {
+    /*/
+    outline: 1px dotted blue;
+    /**/
+
+    width: 200%;
+    height: 200%;
+
+    pointer-events: none;
+
+    transform: scale(0.5);
+}
