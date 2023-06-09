@@ -44,7 +44,7 @@ async function activateGalleryElement(element) {
         )
         .join('\n');
 
-   html +='<a href="https://ai.hejny.org" class="button">More</a>'
+   //html +='<a href="https://ai.hejny.org" class="button">More</a>'
 
     element.innerHTML = html;
 }
