@@ -12,30 +12,30 @@ function activateElement(element) {
 }
 
 async function activateGalleryElement(element) {
-    const response = await fetch(`mocked-api/wallpapers-ids.json`);
-    const wallpapersIds = await response.json();
+    const response = await fetch(`mocked-api/wallpapers-min.json`);
+    const { wallpapers } = await response.json();
 
-    const pickedWallpapersIds = [];
+    const pickedWallpapers = [];
+    const pickedWallpapersIds = new Set();
 
-    while (pickedWallpapersIds.length < 6 /* <- [🥼]*/) {
-        const wallpaperId = wallpapersIds[Math.floor(Math.random() * wallpapersIds.length)];
-        if (pickedWallpapersIds.includes(wallpaperId)) {
+    while (pickedWallpapersIds.size < 6 /* <- [🥼]*/) {
+        const wallpaper = wallpapers[Math.floor(Math.random() * wallpapers.length)];
+        if (pickedWallpapersIds.has(wallpaper.id)) {
             continue;
         }
-        pickedWallpapersIds.push(wallpaperId);
+        pickedWallpapersIds.add(wallpaper.id);
+        pickedWallpapers.push(wallpaper);
     }
 
-    // !!!!! Color of iframe
-    const pickedWallpapersHtmls = pickedWallpapersIds.map(
-        (wallpaperId, i) => `
-
-            <!--<div>${i}</div>-->
-            
-            <a href="https://ai.hejny.org/showcase/${wallpaperId}">
+    const itemsHtml = pickedWallpapers.map(
+        ({ id, primaryColor }) => `
+            <a href="https://ai.hejny.org/showcase/${id}">
                 <iframe
-                    src="https://ai.hejny.org/showcase/${wallpaperId}?mode=presentation"
+                    src="https://ai.hejny.org/showcase/${id}?mode=preview"
                     allowtransparency="false"
                     scrolling="no"
+                    frameborder="0"
+                    style="background-color: ${primaryColor};"
                 ></iframe>
             </a>
             
@@ -45,7 +45,9 @@ async function activateGalleryElement(element) {
     const html = `
         <div class="aiai aiai-gallery">
             <div class="aiai-gallery-items">
-                ${pickedWallpapersHtmls.join('\n\n\n')}
+                <div class="inner">
+                    ${itemsHtml.join('\n\n\n')}
+                </div>
             </div>
             <a href="https://ai.hejny.org" class="button">More</a>
         </div>
