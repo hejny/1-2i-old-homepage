@@ -1,3 +1,23 @@
+*[data-aiai] {
+    --aspect: 1 / 1.61;
+    --scale: 5;
+}
+
+@media only screen and (max-width: 1200px) {
+    /*Tablets [601px -> 1200px]*/
+}
+@media only screen and (max-width: 600px) {
+    /*Big smartphones [426px -> 600px]*/
+
+    *[data-aiai] {
+        --aspect: 1 / 1;
+        --scale: 4;
+    }
+}
+@media only screen and (max-width: 425px) {
+    /*Small smartphones [325px -> 425px]*/
+}
+
 *[data-aiai='gallery'] {
     /*/
     outline: 1px dotted red;
@@ -16,7 +36,7 @@
     /**/
 
     width: 100%;
-    aspect-ratio: 1;
+    aspect-ratio: var(--aspect);
 }
 
 *[data-aiai='gallery'] a {
@@ -36,10 +56,9 @@
     outline: 1px dotted blue;
     /**/
 
-    width: 200%;
-    height: 200%;
-
     pointer-events: none;
 
-    transform: scale(0.5);
+    width: calc(100% * var(--scale));
+    height: calc(100% * var(--scale));
+    transform: scale(calc(1 / var(--scale)));
 }
