@@ -23,9 +23,8 @@
     outline: 1px dotted red;
     /**/
 
-
     width: calc(100% + 0px);
-margin: 0px;
+    margin: 0px;
 
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -52,7 +51,7 @@ margin: 0px;
 
     overflow: clip;
 
-background-color: #777;
+    background-color: #777;
 }
 
 *[data-aiai='gallery'] a iframe {
