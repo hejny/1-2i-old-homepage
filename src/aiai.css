@@ -1,8 +1,9 @@
 /* 📱 Computers */
 .aiai-gallery {
     --on-row: 3;
-    --aspect: 1 / 1.61;
-    --scale: 4;
+    --gap: 0;
+    --aspect: 1.61;
+    --scale: 3;
 }
 
 @media only screen and (max-width: 1200px) {
@@ -10,7 +11,8 @@
 
     .aiai-gallery {
         --on-row: 3;
-        --aspect: 1 / 1;
+        --gap: 2px;
+        --aspect: 1;
         --scale: 3;
     }
 }
@@ -19,8 +21,9 @@
 
     .aiai-gallery {
         --on-row: 2;
-        --aspect: 1 / 1;
-        --scale: 3;
+        --gap: 2px;
+        --aspect: 1;
+        --scale: 4;
     }
 }
 @media only screen and (max-width: 425px) {
@@ -28,24 +31,42 @@
 
     .aiai-gallery {
         --on-row: 1;
-        --aspect: 1 / 1;
+        --gap: 0px;
+        --aspect: 1;
         --scale: 3;
     }
 }
 
 /*------------------------*/
 
-.aiai-gallery-items {
+.aiai-gallery {
     /*/
     outline: 1px dotted red;
     /**/
 
-    width: calc(100% + 0px);
-    margin: 0px;
+    /* TODO: !!! Can be in calc used more than 2 statements | maybe split into multiple calc() */
+    height: calc(100vw * var(--aspect) * 6 / var(--on-row) / var(--on-row)); /* <- [🥼]*/
+}
+
+.aiai-gallery,
+.aiai-gallery * {
+    transition: all 0.2s ease-in-out;
+}
+
+.aiai-gallery-items {
+    /*/
+    outline: 1px dotted green;
+    /**/
+
+    position: absolute;
+    z-index: 9999;
+    width: 100vw;
+    left: 0;
+    /*margin-left: -50px;*/
 
     display: grid;
     grid-template-columns: repeat(var(--on-row), 1fr);
-    grid-gap: 2px;
+    grid-gap: var(--gap);
 }
 
 .aiai-gallery-items > * {
@@ -54,9 +75,7 @@
     /**/
 
     width: 100%;
-    aspect-ratio: var(--aspect);
-
-    transition: all 0.2s ease-in-out;
+    aspect-ratio: 1 / var(--aspect);
 }
 
 .aiai-gallery-items a {
@@ -70,6 +89,7 @@
 
     overflow: clip;
 
+    /* !!!!! Color of iframe */
     background-color: #777;
 }
 

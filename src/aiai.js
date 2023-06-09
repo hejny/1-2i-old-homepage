@@ -17,7 +17,7 @@ async function activateGalleryElement(element) {
 
     const pickedWallpapersIds = [];
 
-    while (pickedWallpapersIds.length < 9) {
+    while (pickedWallpapersIds.length < 6 /* <- [🥼]*/) {
         const wallpaperId = wallpapersIds[Math.floor(Math.random() * wallpapersIds.length)];
         if (pickedWallpapersIds.includes(wallpaperId)) {
             continue;
@@ -25,6 +25,7 @@ async function activateGalleryElement(element) {
         pickedWallpapersIds.push(wallpaperId);
     }
 
+    // !!!!! Color of iframe
     const pickedWallpapersHtmls = pickedWallpapersIds.map(
         (wallpaperId, i) => `
 
