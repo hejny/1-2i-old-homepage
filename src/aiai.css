@@ -1,6 +1,6 @@
 *[data-aiai] {
     --aspect: 1 / 1.61;
-    --scale: 5;
+    --scale: 3;
 }
 
 @media only screen and (max-width: 1200px) {
@@ -50,6 +50,8 @@ margin: -50px;
     align-items: center;
 
     overflow: clip;
+
+background-color: #777;
 }
 
 *[data-aiai='gallery'] a iframe {
