@@ -32,7 +32,7 @@
     .aiai-gallery {
         --on-row: 2;
         --gap: 3px;
-        --aspect: 1;
+        --aspect: 1.61;
         --scale: 1.5;
     }
 }
