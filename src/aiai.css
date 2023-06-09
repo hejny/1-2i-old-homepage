@@ -1,24 +1,41 @@
-*[data-aiai] {
+/* 📱 Computers */
+.aiai-gallery {
+    --on-row: 3;
     --aspect: 1 / 1.61;
-    --scale: 3;
+    --scale: 4;
 }
 
 @media only screen and (max-width: 1200px) {
-    /*Tablets [601px -> 1200px]*/
+    /* 📱 Tablets */
+
+    .aiai-gallery {
+        --on-row: 3;
+        --aspect: 1 / 1;
+        --scale: 3;
+    }
 }
 @media only screen and (max-width: 600px) {
-    /*Big smartphones [426px -> 600px]*/
+    /* 📱 Big smartphones */
 
-    *[data-aiai] {
+    .aiai-gallery {
+        --on-row: 2;
         --aspect: 1 / 1;
-        --scale: 4;
+        --scale: 3;
     }
 }
 @media only screen and (max-width: 425px) {
-    /*Small smartphones [325px -> 425px]*/
+    /* 📱 Small smartphones */
+
+    .aiai-gallery {
+        --on-row: 1;
+        --aspect: 1 / 1;
+        --scale: 3;
+    }
 }
 
-*[data-aiai='gallery'] {
+/*------------------------*/
+
+.aiai-gallery-items {
     /*/
     outline: 1px dotted red;
     /**/
@@ -27,20 +44,22 @@
     margin: 0px;
 
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(var(--on-row), 1fr);
     grid-gap: 2px;
 }
 
-*[data-aiai='gallery'] > * {
+.aiai-gallery-items > * {
     /*/
     outline: 1px dotted rgb(0, 255, 55);
     /**/
 
     width: 100%;
     aspect-ratio: var(--aspect);
+
+    transition: all 0.2s ease-in-out;
 }
 
-*[data-aiai='gallery'] a {
+.aiai-gallery-items a {
     /*/
     outline: 1px dotted rgb(28, 80, 28);
     /**/
@@ -54,7 +73,7 @@
     background-color: #777;
 }
 
-*[data-aiai='gallery'] a iframe {
+.aiai-gallery-items a iframe {
     /*/
     outline: 1px dotted blue;
     /**/

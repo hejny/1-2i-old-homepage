@@ -25,10 +25,8 @@ async function activateGalleryElement(element) {
         pickedWallpapersIds.push(wallpaperId);
     }
 
-    let html = pickedWallpapersIds
-        .map(
-            // TODO: !!! Use spaceTrim
-            (wallpaperId, i) => `
+    const pickedWallpapersHtmls = pickedWallpapersIds.map(
+        (wallpaperId, i) => `
 
             <!--<div>${i}</div>-->
             
@@ -41,15 +39,23 @@ async function activateGalleryElement(element) {
             </a>
             
         `,
-        )
-        .join('\n');
+    );
 
-    //html +='<a href="https://ai.hejny.org" class="button">More</a>'
+    const html = `
+        <div class="aiai aiai-gallery">
+            <div class="aiai-gallery-items">
+                ${pickedWallpapersHtmls.join('\n\n\n')}
+            </div>
+            <a href="https://ai.hejny.org" class="button">More</a>
+        </div>
+    `;
 
     element.innerHTML = html;
 }
 
 /**
+ * TODO: Use spaceTrim
+ * TODO: Maybe use shadow dom not just CSS / data-aiai prefixing
  * TODO: Recursive activation of elements
  * TODO: !!! This should be really exported / provided from Aiai as a embed integration
  */
