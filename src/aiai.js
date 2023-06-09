@@ -25,7 +25,7 @@ async function activateGalleryElement(element) {
         pickedWallpapersIds.push(wallpaperId);
     }
 
-    const html = pickedWallpapersIds
+    let html = pickedWallpapersIds
         .map(
             // TODO: !!! Use spaceTrim
             (wallpaperId, i) => `
@@ -35,7 +35,7 @@ async function activateGalleryElement(element) {
             <a href="https://ai.hejny.org/showcase/${wallpaperId}">
                 <iframe
                     src="https://ai.hejny.org/showcase/${wallpaperId}?mode=presentation"
-                    allowtransparency="true"
+                    allowtransparency="false"
                     scrolling="no"
                 ></iframe>
             </a>
@@ -43,6 +43,8 @@ async function activateGalleryElement(element) {
         `,
         )
         .join('\n');
+
+   html +='<a href="https://ai.hejny.org" class="button">More</a>'
 
     element.innerHTML = html;
 }
