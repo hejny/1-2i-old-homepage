@@ -23,11 +23,12 @@
     outline: 1px dotted red;
     /**/
 
-    width: calc(100% + 100px);
-margin: -50px;
+
+    width: calc(100% + 0px);
+margin: 0px;
 
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     grid-gap: 2px;
 }
 
