@@ -23,12 +23,41 @@
         <link rel="stylesheet" href="config.css" />
         <link rel="stylesheet" href="build/common.css" />
         <link rel="stylesheet" href="build/article.css" />
+        <link rel="stylesheet" href="build/menu.css" />
         <link rel="stylesheet" href="build/pricing-table.css" />
         <link rel="stylesheet" href="src/aiai.css" />
         <!-- <- TODO: !!! This style should be added by script -->
         <script src="src/aiai.js" async defer></script>
     </head>
     <body>
+        <nav>
+            <!--[🍔]-->
+            <div id="menu">
+                <div id="menu-bar" onclick="menuOnClick()">
+                    <div id="bar1" class="bar"></div>
+                    <div id="bar2" class="bar"></div>
+                    <div id="bar3" class="bar"></div>
+                </div>
+                <nav class="nav" id="nav">
+                    <ul>
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/pricing">Pricing</a></li>
+                        <li>
+                            <a href="https://ai.hejny.org/">Gallery</a>
+                        </li>
+                        <li><a href="mailto:me@pavolhejny.com">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="menu-bg" id="menu-bg"></div>
+            <script>
+                function menuOnClick() {
+                    document.getElementById('menu-bar').classList.toggle('change');
+                    document.getElementById('nav').classList.toggle('change');
+                    document.getElementById('menu-bg').classList.toggle('change-bg');
+                }
+            </script>
+        </nav>
         <div class="ShowcaseContent_page__J4mXA">
             <header>
                 <div class="HeaderWallpaper_HeaderWallpaper__XY4hw" style="background-color: #553039">
