@@ -32,6 +32,7 @@
     <body>
         <nav>
             <!--[🍔]-->
+            <!-- !! Use only classes not IDs-->
             <div id="menu">
                 <div id="menu-bar" onclick="menuOnClick()">
                     <div id="bar1" class="bar"></div>
@@ -49,7 +50,9 @@
                     </ul>
                 </nav>
             </div>
-            <div class="menu-bg" id="menu-bg"></div>
+            <div class="menu-bg-wrapper">
+                <div class="menu-bg" id="menu-bg"></div>
+            </div>
             <script>
                 function menuOnClick() {
                     document.getElementById('menu-bar').classList.toggle('change');
