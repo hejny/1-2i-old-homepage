@@ -55,7 +55,7 @@
             _smartsupp.key = 'f2e0946d05c186b5a6686ba408581ea863a710d4';
 
             // --- Customization ---
-            _smartsupp.color = '#4de7c6';
+            _smartsupp.color = getComputedStyle(document.documentElement).getPropertyValue('--palette-5');
 
             window.smartsupp ||
                 (function (d) {

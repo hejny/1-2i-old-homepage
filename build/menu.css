@@ -19,7 +19,7 @@
     height: 5px;
     width: 100%;
     background-color: var(--palette-1);
-    box-shadow: 2px 2px 0 var(--palette-3);
+    box-shadow: 2px 2px 0 var(--palette-5);
     display: block;
     border-radius: 5px;
     transition: 0.3s ease;
@@ -113,12 +113,16 @@
     box-sizing: content-box;
 }
 
+.menu-bg:not(.open) {
+    height: 570px;
+}
+
 .menu-bg.open {
     width: 230px;
     height: 570px;
 
     border-left: 20px solid var(--palette-5);
-    border-bottom: 20px solid var(--palette-3);
+    border-bottom: 20px solid var(--palette-5-darken);
 }
 
 .open {

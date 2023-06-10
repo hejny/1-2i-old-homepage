@@ -20,9 +20,10 @@
     /* Note: --palette-4 is 2nd most satulighted color of the bottom half of the wallpaper which is distant enough (10%) and hue-distant enough (30°) from all other palette colors. */
     --palette-4: #ff33bb;
     --palette-4-triplet: 255, 51, 187;
-    /* Note: --palette-5 is 3rd most frequent color of the bottom half of the wallpaper which is distant enough (10%) and hue-distant enough (30°) from all other palette colors. */
-    --palette-5: #ffee77;
-    --palette-5-triplet: 255, 238, 119;
+    /* Note: Custom picked */
+    --palette-5: #4de7c6;
+    --palette-5-darken: #2a7c6a;
+    --palette-5-triplet: 77, 231, 198;
 
     --palette-6: var(--palette-0);
     --palette-6-triplet: var(--palette-0-triplet);
