@@ -40,14 +40,21 @@
 
 .nav ul {
     padding: 0;
+    margin: 0;
 }
 
 .nav li {
     list-style: none;
-    padding: 12px 0;
+    text-align: right;
+    border-bottom: 1px solid rgba(var(--palette-1-triplet), 0.3);
 }
 
 .nav li a {
+    display: block;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    padding-right: 26px;
+
     color: white;
     font-size: 20px;
     text-decoration: none;
