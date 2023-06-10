@@ -30,10 +30,10 @@
     /* 📱 Small smartphones */
 
     .aiai-gallery {
-        --on-row: 1;
-        --gap: 0px;
-        --aspect: 1;
-        --scale: 3;
+        --on-row: 2;
+        --gap: 3px;
+        --aspect: 1.61;
+        --scale: 1.5;
     }
 }
 
@@ -101,4 +101,5 @@
     width: calc(100% * var(--scale));
     height: calc(100% * var(--scale));
     transform: scale(calc(1 / var(--scale)));
+    transform-origin: 50% 50%;
 }
