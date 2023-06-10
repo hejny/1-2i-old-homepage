@@ -12,7 +12,7 @@ function activateElement(element) {
 }
 
 async function activateGalleryElement(element) {
-    const response = await fetch(`mocked-api/wallpapers-min.json`);
+    const response = await fetch(`mocked-api/wallpapers-min-liked.json`);
     const { wallpapers } = await response.json();
 
     const pickedWallpapers = [];
