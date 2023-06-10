@@ -12,6 +12,8 @@ function activateElement(element) {
 }
 
 async function activateGalleryElement(element) {
+
+   // !!! put loading placeholders 
     const response = await fetch(`mocked-api/wallpapers-min-loved.json`);
     const { wallpapers } = await response.json();
 
