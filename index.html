@@ -25,9 +25,8 @@
         <link rel="stylesheet" href="build/article.css" />
         <link rel="stylesheet" href="build/menu.css" />
         <link rel="stylesheet" href="build/pricing-table.css" />
+        <!-- <- TODO: Following style src/aiai.css should be added by script -->
         <link rel="stylesheet" href="src/aiai.css" />
-        <!-- <- TODO: !!! This style should be added by script -->
-        <script src="src/aiai.js" async defer></script>
 
         <!-------------[ SmartLook: ]--------------->
         <script type="text/javascript">
@@ -228,6 +227,8 @@
                             -->
 
                             <div data-aiai="gallery"></div>
+                            <!-- Note: It is OK to have the following script without async and defer attributes because the script is tiny and async internally -->
+                            <script src="src/aiai.js"></script>
 
                             <!--
                             <iframe

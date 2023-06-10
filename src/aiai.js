@@ -12,8 +12,22 @@ function activateElement(element) {
 }
 
 async function activateGalleryElement(element) {
+    element.innerHTML = `
+        <div class="aiai aiai-gallery">
+            <div class="aiai-gallery-items">
+                <div class="inner">
+                    <div class="placeholder"></div>
+                    <div class="placeholder"></div>
+                    <div class="placeholder"></div>
+                    <div class="placeholder"></div>
+                    <div class="placeholder"></div>
+                    <div class="placeholder"></div>
+                </div>
+            </div>
+            <a href="https://ai.hejny.org" class="button">More</a>
+        </div>
+    `;
 
-   // !!! put loading placeholders 
     const response = await fetch(`mocked-api/wallpapers-min-loved.json`);
     const { wallpapers } = await response.json();
 

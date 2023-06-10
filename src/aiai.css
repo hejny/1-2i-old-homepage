@@ -103,3 +103,27 @@
     transform: scale(calc(1 / var(--scale)));
     transform-origin: 50% 50%;
 }
+
+.aiai-gallery .placeholder {
+    overflow: hidden;
+    background: #000;
+    position: relative;
+
+    animation-duration: 1.7s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-name: aiai-placeholder-animate;
+    background: #f6f7f8;
+    background: linear-gradient(to right, #eee 2%, #ccc 18%, #eee 33%);
+    background-size: 1300px;
+}
+
+@keyframes aiai-placeholder-animate {
+    0% {
+        background-position: -650px 0;
+    }
+    100% {
+        background-position: 650px 0;
+    }
+}
