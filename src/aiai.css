@@ -61,7 +61,7 @@
 
     position: absolute;
     z-index: 9999;
-    width: 100vw;
+    width: 100%;
     left: 0;
     /*margin-left: -50px;*/
 
