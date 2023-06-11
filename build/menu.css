@@ -6,6 +6,7 @@
     z-index: 102;
     user-select: none;
     position: relative;
+    
 }
 
 #menu-bar {
@@ -102,6 +103,8 @@
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
+
+pointer-events: none;
 }
 
 .menu-bg {
