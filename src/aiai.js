@@ -24,7 +24,7 @@ async function activateGalleryElement(element) {
                     <div class="placeholder"></div>
                 </div>
             </div>
-            <a href="https://ai.hejny.org" class="button">More</a>
+            <a href="https://ai.hejny.org/?home=https://atf.hejny.org/" class="button">More</a>
         </div>
     `;
 
@@ -65,7 +65,7 @@ async function activateGalleryElement(element) {
                     ${itemsHtml.join('\n\n\n')}
                 </div>
             </div>
-            <a href="https://ai.hejny.org" class="button">More</a>
+            <a href="https://ai.hejny.org/?home=https://atf.hejny.org/" class="button">More</a>
         </div>
     `;
 
