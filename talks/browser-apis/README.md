@@ -1,38 +1,33 @@
+# Most interesting browser APIs _(in 2023)_
 
+[`Saturday, June 17 • 5:00pm - 5:35pm`](https://devconfcz2023.sched.com/event/1MYeB)
 
-# Pixel Space Platformer
+At DevConf 2020 I gave a talk about the most useful browser APIs.
+Now I will talk about the most interesting, unexpected and unusual things you can do directly in the browser app.
 
-Welcome to Retro Space Adventure, an exciting platformer game that takes you on a journey through the galaxy! Our game features pixel art graphics that transport you back to the golden age of gaming.
+-   **Web Speech API**: For using the user's voice to control the web apps.
+-   **Sensor APIs**: Provides access to different sensors on a user's device, such as an accelerometer or gyroscope.
+-   **WebXR**: Allows developers to create virtual and augmented reality experiences in the browser.
+-   **Internationalisation API**: Provides a way to format dates, times, numbers, currencies, and more.
+-   **Offscreen Canvas API**: Allows developers to perform graphics operations outside of the main thread, improving performance.
+-   **File system access API**: Provides a way for web applications to read and write files on a user's device.
 
-## Explore the Galaxy
+## Web Speech API
 
-In Retro Space Adventure, you play as a brave astronaut who must navigate through different planets and defeat alien enemies. Our game features multiple levels, each with its own unique challenges and obstacles. The wallpaper on our website depicts a pixel art spacecraft, with blocky shapes and limited colors creating a nostalgic and playful feel.
+The Web Speech API provides two distinct areas of functionality — speech recognition, and speech synthesis (also known as text to speech, or tts) — which open up interesting new possibilities for accessibility, and control mechanisms.
 
-## Collect Power-Ups
+### Speech recognition
 
-As you progress through the game, you'll collect power-ups that will help you on your mission. These include weapons to defeat enemies, shields to protect yourself, and extra lives to keep you going.
+The SpeechRecognition interface of the Web Speech API is the controller interface for the recognition service; this also handles the SpeechRecognitionEvent sent from the recognition service.
 
-## User Stories
+```js
+const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+const recognition = new SpeechRecognition();
+recognition.lang = 'en-US';
+recognition.interimResults = false;
+recognition.maxAlternatives = 1;
 
-Our users love Retro Space Adventure! Here's what some of them have to say:
+recognition.start();
+```
 
-> "I love the retro feel of this game. It's like playing my favorite games from when I was a kid!" - John D.
-
-> "The pixel art is so cool! It really adds to the overall vibe of the game." - Sarah L.
-
-## References
-
-Want to learn more about Retro Space Adventure? Check out these resources:
-
-- [Gameplay Trailer](#trailer)
-- [Developer Blog](#blog)
-- [FAQs](#faqs)
-
-## Contact Us
-
-Have a question or comment about Retro Space Adventure? Contact us at [contact@retrospaceadventure.com](mailto:contact@retrospaceadventure.com).
-
----
-
-Ready to embark on your own space adventure? Download the game now and start exploring the galaxy!
-
+### Speech synthesis
