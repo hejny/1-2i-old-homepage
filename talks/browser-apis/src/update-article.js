@@ -23,4 +23,6 @@ async function updateArticle() {
     const html = converter.makeHtml(markdown);
 
     contentElement.innerHTML = html;
+
+    hljs.highlightAll();
 }

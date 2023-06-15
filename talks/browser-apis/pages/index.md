@@ -15,3 +15,11 @@ Now I will talk about the most interesting, unexpected and unusual things you ca
 ```
 test();
 ```
+
+```js
+test();
+```
+
+```javascript
+test();
+```
