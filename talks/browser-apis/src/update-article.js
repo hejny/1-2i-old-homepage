@@ -29,8 +29,9 @@ async function updateArticle() {
     for (const codeBlock of Array.from(document.querySelectorAll('pre code'))) {
         const runButton = document.createElement('button');
         runButton.innerText = 'Run';
+        runButton.classList.add('button');
         runButton.classList.add('run-button');
-        codeBlock.parentElement.insertBefore(runButton, codeBlock);
+        insertAfter(runButton, codeBlock.parentElement.parentElement);
 
         runButton.addEventListener('click', () => {
             eval(codeBlock.innerText);
@@ -38,4 +39,8 @@ async function updateArticle() {
     }
 
     hljs.highlightAll();
+}
+
+function insertAfter(newNode, existingNode) {
+    existingNode.parentNode.insertBefore(newNode, existingNode.nextSibling);
 }

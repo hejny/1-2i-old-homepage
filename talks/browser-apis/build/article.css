@@ -94,8 +94,6 @@ TODO: There should be some indication that content continues below the fold.
 }
 
 .ArticlePresentation .run-button {
-    position: absolute;
-    right: 0;
 }
 
 .ArticlePresentation ol,
