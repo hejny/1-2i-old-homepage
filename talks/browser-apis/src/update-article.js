@@ -25,5 +25,17 @@ async function updateArticle() {
 
     contentElement.innerHTML = html;
 
+    // Note: Go through all the code blocks and add run button to them
+    for (const codeBlock of Array.from(document.querySelectorAll('pre code'))) {
+        const runButton = document.createElement('button');
+        runButton.innerText = 'Run';
+        runButton.classList.add('run-button');
+        codeBlock.parentElement.insertBefore(runButton, codeBlock);
+
+        runButton.addEventListener('click', () => {
+            eval(codeBlock.innerText);
+        });
+    }
+
     hljs.highlightAll();
 }

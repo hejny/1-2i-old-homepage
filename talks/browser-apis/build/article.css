@@ -89,7 +89,13 @@ TODO: There should be some indication that content continues below the fold.
 }
 
 .ArticlePresentation pre {
+    margin-top: 20px;
     text-align: left;
+}
+
+.ArticlePresentation .run-button {
+    position: absolute;
+    right: 0;
 }
 
 .ArticlePresentation ol,

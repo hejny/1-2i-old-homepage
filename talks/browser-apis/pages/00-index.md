@@ -12,35 +12,21 @@ Now I will talk about the most interesting, unexpected and unusual things you ca
 -   [**Offscreen Canvas API**](50-offscreen-canvas-api.md): Allows developers to perform graphics operations outside of the main thread, improving performance.
 -   [**File system access API**](60-file-system-access-api.md): Provides a way for web applications to read and write files on a user's device.
 
-```
-const converter = new showdown.Converter({
-    /*
-    Note: !!!!
-    extensions: [
-        showdownHighlight({
-            // Whether to add the classes to the <pre> tag, default is false
-            pre: true,
-            // Whether to use hljs' auto language detection, default is true
-            auto_detection: true,
-        }),
-    ],
-    */
-});
-converter.setFlavor('github');
+```javascript
+// Download pdf file
 
-/* not await */ updateArticle();
-
-async function updateArticle() {
-    const contentElement = document.getElementById('content');
-    const src = contentElement.dataset.markdownSource;
-    const response = await fetch(src);
-    const markdown = await response.text();
-
-    const html = converter.makeHtml(markdown);
-
-    contentElement.innerHTML = html;
-
-    hljs.highlightAll();
+async function save() {
+    const fileHandle = await window.showSaveFilePicker({
+        types: [
+            {
+                description: 'PDF files',
+                accept: {
+                    'application/pdf': ['.pdf'],
+                },
+            },
+        ],
+    });
 }
 
+save();
 ```

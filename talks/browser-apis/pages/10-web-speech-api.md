@@ -10,10 +10,14 @@ The SpeechRecognition interface of the Web Speech API is the controller interfac
 const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
 const recognition = new SpeechRecognition();
 recognition.lang = 'en-US';
-recognition.interimResults = false;
+recognition.interimResults = true;
 recognition.maxAlternatives = 1;
 
 recognition.start();
+
+recognition.onresult = function (event) {
+    alert('You said: ', event.results[0][0].transcript);
+};
 ```
 
 ## Speech synthesis
