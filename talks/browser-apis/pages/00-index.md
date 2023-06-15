@@ -13,5 +13,34 @@ Now I will talk about the most interesting, unexpected and unusual things you ca
 -   [**File system access API**](60-file-system-access-api.md): Provides a way for web applications to read and write files on a user's device.
 
 ```
-window.test();
+const converter = new showdown.Converter({
+    /*
+    Note: !!!!
+    extensions: [
+        showdownHighlight({
+            // Whether to add the classes to the <pre> tag, default is false
+            pre: true,
+            // Whether to use hljs' auto language detection, default is true
+            auto_detection: true,
+        }),
+    ],
+    */
+});
+converter.setFlavor('github');
+
+/* not await */ updateArticle();
+
+async function updateArticle() {
+    const contentElement = document.getElementById('content');
+    const src = contentElement.dataset.markdownSource;
+    const response = await fetch(src);
+    const markdown = await response.text();
+
+    const html = converter.makeHtml(markdown);
+
+    contentElement.innerHTML = html;
+
+    hljs.highlightAll();
+}
+
 ```

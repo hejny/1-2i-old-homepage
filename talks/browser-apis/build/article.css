@@ -88,6 +88,10 @@ TODO: There should be some indication that content continues below the fold.
     text-align: left;
 }
 
+.ArticlePresentation pre {
+    text-align: left;
+}
+
 .ArticlePresentation ol,
 .ArticlePresentation ul {
     text-align: left;

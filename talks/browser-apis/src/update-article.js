@@ -1,5 +1,6 @@
 const converter = new showdown.Converter({
     /*
+    Note: !!!!
     extensions: [
         showdownHighlight({
             // Whether to add the classes to the <pre> tag, default is false
