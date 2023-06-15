@@ -6,23 +6,10 @@
  *          3. Chage article style NOT common style
  */
 
-@import url(https://fonts.googleapis.com/css2?family=Montserrat&display=swap) @import
-    url(https://fonts.googleapis.com/css2?family=Poppins&display=swap) @import
-    url(https://fonts.googleapis.com/css2?family=Open+Sans&display=swap) @import
-    url(https://fonts.googleapis.com/css2?family=Lobster&display=swap) @import
-    url(https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap) @import
-    url(https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap) @import
-    url(https://fonts.googleapis.com/css2?family=Lato&display=swap) @import
-    url(https://fonts.googleapis.com/css2?family=Roboto&display=swap) @import
-    url(https://fonts.googleapis.com/css2?family=Inter&display=swap) @import
-    url(https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&display=swap) @import
-    url(https://fonts.googleapis.com/css2?family=Exo+2&display=swap) @import
-    url(https://fonts.googleapis.com/css2?family=Orbitron&display=swap) @import
-    url(https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap) @import
-    url(https://fonts.googleapis.com/css2?family=Alegreya&display=swap) @import
-    url(https://fonts.googleapis.com/css2?family=Raleway&display=swap) @import
-    url(https://fonts.googleapis.com/css2?family=Futura&display=swap) @import
-    url(https://fonts.googleapis.com/css2?family=Barlow+Condensed&display=swap) .md-editor-toolbar {
+@import url(https://fonts.googleapis.com/css2?family=Orbitron&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Barlow+Condensed&display=swap);
+
+.md-editor-toolbar {
     padding: 4px 2px 4px 5px;
     border-radius: 3px 3px 0 0;
     gap: 4px;
@@ -1306,6 +1293,9 @@ body[data-color-mode*='light'] {
     top: 0;
     left: 0;
     margin-right: 5px;
+
+    font-size: 0.8em;
+    opacity: 0.8;
 }
 
 .HeaderWallpaper_HeaderWallpaper__XY4hw {

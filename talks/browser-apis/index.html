@@ -71,7 +71,7 @@
             </div>
             <div class="Menu_MenuBgWrapper__yceuG"><div class="Menu_MenuBg__MZGx2"></div></div>
             <header>
-                <div class="HeaderWallpaper_HeaderWallpaper__XY4hw" style="background-color:#433050">
+                <div class="HeaderWallpaper_HeaderWallpaper__XY4hw" style="background-color: #433050">
                     <div class="HeaderWallpaper_inner__bAuV5">
                         <img
                             alt="A pixel art depiction of a spacecraft, with blocky shapes and limited colors creating a nostalgic and playful feel."
@@ -82,7 +82,16 @@
                             height="1080"
                             decoding="async"
                             data-nimg="1"
-                            style='color:transparent;object-fit:cover;width:100%;height:100%;background-size:cover;background-position:50% 50%;background-repeat:no-repeat;background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns=&#x27;http%3A//www.w3.org/2000/svg&#x27; viewBox=&#x27;0 0 1920 1080&#x27;%3E%3Cfilter id=&#x27;b&#x27; color-interpolation-filters=&#x27;sRGB&#x27;%3E%3CfeGaussianBlur stdDeviation=&#x27;20&#x27;/%3E%3C/filter%3E%3Cimage preserveAspectRatio=&#x27;none&#x27; filter=&#x27;url(%23b)&#x27; x=&#x27;0&#x27; y=&#x27;0&#x27; height=&#x27;100%25&#x27; width=&#x27;100%25&#x27; href=&#x27;data:image/gif;base64,R0lGODlhAQABAPAAAEMwUP///yH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==&#x27;/%3E%3C/svg%3E")'
+                            style="
+                                color: transparent;
+                                object-fit: cover;
+                                width: 100%;
+                                height: 100%;
+                                background-size: cover;
+                                background-position: 50% 50%;
+                                background-repeat: no-repeat;
+                                background-image: url('data:image/svg+xml;charset=utf-8,%3Csvg xmlns=&#x27;http%3A//www.w3.org/2000/svg&#x27; viewBox=&#x27;0 0 1920 1080&#x27;%3E%3Cfilter id=&#x27;b&#x27; color-interpolation-filters=&#x27;sRGB&#x27;%3E%3CfeGaussianBlur stdDeviation=&#x27;20&#x27;/%3E%3C/filter%3E%3Cimage preserveAspectRatio=&#x27;none&#x27; filter=&#x27;url(%23b)&#x27; x=&#x27;0&#x27; y=&#x27;0&#x27; height=&#x27;100%25&#x27; width=&#x27;100%25&#x27; href=&#x27;data:image/gif;base64,R0lGODlhAQABAPAAAEMwUP///yH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==&#x27;/%3E%3C/svg%3E');
+                            "
                         />
                     </div>
                 </div>
@@ -94,9 +103,16 @@
             </div>
             <main>
                 <div class="Section_section__FuI7l Welcome_WelcomeSection__oW_pM" id="welcome">
-                    <div class="Html_html__Hru7D Article_Article__fAEyv">
+                    <div
+                        class="Html_html__Hru7D Article_Article__fAEyv"
+                        id="content"
+                        data-markdown-source="pages/index.md"
+                        style="font-family: 'Barlow Condensed', sans-serif"
+                    >
+                        <!--------[ Content: ]-------->
+
                         <p></p>
-                        <div style="font-family:&#x27;Montserrat&#x27;, sans-serif">
+                        <div>
                             <p></p>
                             <h1 id="pixel-space-platformer">Pixel Space Platformer</h1>
                             <p>
@@ -149,16 +165,27 @@
                                 Ready to embark on your own space adventure? Download the game now and start exploring
                                 the galaxy!
                             </p>
+
+                            <!--------[ /Content ]-------->
                         </div>
                     </div>
                 </div>
             </main>
+            <script src="https://cdn.jsdelivr.net/npm/showdown@2.1.0/dist/showdown.min.js"></script>
+            <!-- !!! <script src="https://cdn.jsdelivr.net/npm/showdown-highlight@3.1.0/lib/index.min.js"></script>!-->
+            <script src="src/update-article.js"></script>
+
             <footer>
                 <div class="Footer_FooterSection__AG8tt">
                     <ul>
                         <li>© 2023</li>
                         <li><a href="/">Home</a></li>
-                        <li><a href="https://app.ai.hejny.org/showcase/c5433a86-426d-4c9c-bb5a-b9373ba26ff9?mode=explanation">AI Web</a></li>
+                        <li>
+                            <a
+                                href="https://app.ai.hejny.org/showcase/c5433a86-426d-4c9c-bb5a-b9373ba26ff9?mode=explanation"
+                                >AI Web</a
+                            >
+                        </li>
                         <li><a href="https://ai.hejny.org/contact">Contact</a></li>
                     </ul>
                 </div>
