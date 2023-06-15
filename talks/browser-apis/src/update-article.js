@@ -31,7 +31,7 @@ async function updateArticle() {
         runButton.innerText = 'Run';
         runButton.classList.add('button');
         runButton.classList.add('run-button');
-        insertAfter(runButton, codeBlock.parentElement.parentElement);
+        insertAfter(runButton, codeBlock.parentElement);
 
         runButton.addEventListener('click', () => {
             eval(codeBlock.innerText);
