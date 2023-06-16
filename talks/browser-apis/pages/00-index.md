@@ -11,7 +11,7 @@ _(From my subjective point of view)_
 
 > Web APIs are typically used with JavaScript, although this doesn't always have to be the case.
 
-There are a loooooot of 
+There are a **looooooooooooooooooot** of them 
 https://developer.mozilla.org/en-US/docs/Web/API
 
 I picked:
