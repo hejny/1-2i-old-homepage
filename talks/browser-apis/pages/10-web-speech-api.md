@@ -21,3 +21,11 @@ recognition.onresult = function (event) {
 ```
 
 ## Speech synthesis
+
+
+```
+const utterance = new SpeechSynthesisUtterance(`Hello DevConf 2023`);
+utterance.lang = 'en-US';
+
+synth.speak(utterance);
+```
