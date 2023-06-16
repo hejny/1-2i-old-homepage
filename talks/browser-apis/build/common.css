@@ -1396,7 +1396,7 @@ body[data-color-mode*='light'] {
 .Menu_bar__kOpdk {
     height: 5px;
     width: 100%;
-    background-color: var(--palette-1-darken);
+    background-color: var(--palette-1);
     box-shadow: 2px 2px 0 var(--palette-5);
     display: block;
     border-radius: 5px;
@@ -1492,7 +1492,7 @@ nav.Menu_MenuContent__ZcI37 li:hover {
     position: absolute;
     width: 0;
     height: 0;
-    background: radial-gradient(circle, var(--palette-0), var(--palette-0));
+    background: radial-gradient(circle, var(--palette-0-darken), var(--palette-0));
     box-shadow: 0 0 20px rgba(var(--palette-1-triplet), 0.8);
     border-radius: 50%;
     transition: 0.3s ease;
