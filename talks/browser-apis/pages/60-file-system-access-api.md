@@ -8,7 +8,7 @@ The File System Access API can be used to create file editors, image uploaders, 
 const fileHandle = await window.showOpenFilePicker();
 const file = await fileHandle.getFile();
 const content = await file.text();
-console.log('File content:', content);
+console.log('File content '+ content);
 ```
 
 - **Pros:** Enables file manipulation and integration with local storage.
