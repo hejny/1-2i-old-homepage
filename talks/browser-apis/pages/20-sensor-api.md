@@ -4,6 +4,8 @@ Provides access to different sensors on a user's device, such as an acceleromete
 
 There is also an separate Geologation API.
 
+## Accelerometer
+
 ```javascript
 if (!('Accelerometer' in window)) {
   console.log('Accelerometer not aviable');
@@ -24,6 +26,8 @@ sensor.start();
 ```
 
 
+## deviceorientation
+
 
 ```javascript
 window.addEventListener('deviceorientation', (event) => {
@@ -35,4 +39,30 @@ window.addEventListener('deviceorientation', (event) => {
         (alpha > 0 ? '🟩' : '🟥')
     );
 });
+```
+
+## ProximitySensor
+
+```javascript
+const sensor = new ProximitySensor();
+
+sensor.addEventListener('reading', () => {
+  console.log(sensor.near ? 'Near' : 'Far');
+});
+
+sensor.start();
+```
+
+## AmbientLightSensor
+
+
+```javascript
+const sensor = new AmbientLightSensor();
+
+sensor.addEventListener('reading', () => {
+  console.log(`Illuminance: ${sensor.illuminance} lux`);
+});
+
+sensor.start();
+
 ```
