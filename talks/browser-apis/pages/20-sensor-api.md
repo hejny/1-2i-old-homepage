@@ -22,3 +22,17 @@ sensor.addEventListener('reading', () => {
 sensor.start();
 
 ```
+
+
+
+```javascript
+window.addEventListener('deviceorientation', (event) => {
+    const { alpha, beta, gamma } = event;
+    
+    console.log(
+        (gamma > 0 ? '🟩' : '🟥') +
+        (beta > 0 ? '🟩' : '🟥') +
+        (alpha > 0 ? '🟩' : '🟥')
+    );
+});
+```
