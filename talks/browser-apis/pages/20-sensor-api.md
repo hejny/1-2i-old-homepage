@@ -5,7 +5,7 @@ Provides access to different sensors on a user's device, such as an acceleromete
 There is also an separate Geologation API.
 
 ```javascript
-if ('Accelerometer' in window) {
+if (!('Accelerometer' in window)) {
   console.log('Accelerometer not aviable');
   return;
 }
