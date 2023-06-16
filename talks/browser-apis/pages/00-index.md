@@ -1,9 +1,13 @@
 # Most interesting browser APIs _(in 2023)_
 
-[`Saturday, June 17 • 5:00pm - 5:35pm`](https://devconfcz2023.sched.com/event/1MYeB)
+[`DevConf 2023, Brno, Saturday, June 17 • 5:00pm - 5:35pm`](https://devconfcz2023.sched.com/event/1MYeB)
 
 At DevConf 2020 I gave a talk about the most useful browser APIs.
 Now I will talk about the most interesting, unexpected and unusual things you can do directly in the browser app.
+
+
+
+
 
 -   [**Web Speech API**](10-web-speech-api): For using the user's voice to control the web apps.
 -   [**Sensor APIs**](10-web-speech-api): Provides access to different sensors on a user's device, such as an accelerometer or gyroscope.
@@ -11,32 +15,6 @@ Now I will talk about the most interesting, unexpected and unusual things you ca
 -   [**Internationalisation API**](40-internationalisation-api.md): Provides a way to format dates, times, numbers, currencies, and more.
 -   [**Offscreen Canvas API**](50-offscreen-canvas-api.md): Allows developers to perform graphics operations outside of the main thread, improving performance.
 -   [**File system access API**](60-file-system-access-api.md): Provides a way for web applications to read and write files on a user's device.
-
-```javascript
-console.log(`Hello`);
-```
-
-<!--
-```javascript
-// Download pdf file
-
-async function save() {
-    const fileHandle = await window.showSaveFilePicker({
-        types: [
-            {
-                description: 'PDF files',
-                accept: {
-                    'application/pdf': ['.pdf'],
-                },
-            },
-        ],
-    });
-}
-
-save();
-```
--->
-
 
 
 <iframe src="https://developer.mozilla.org/en-US/docs/Web/API" style"width:100%; height:2000px"></iframe>
@@ -161,3 +139,32 @@ save();
 - Stay tuned for future updates and explore the exciting world of browser APIs.
 
 Note: The provided code samples are simplified for brevity and may require additional configuration and error handling in real-world applications.
+
+
+
+
+<!--
+```javascript
+console.log(`Hello`);
+```
+
+```javascript
+// Download pdf file
+
+async function save() {
+    const fileHandle = await window.showSaveFilePicker({
+        types: [
+            {
+                description: 'PDF files',
+                accept: {
+                    'application/pdf': ['.pdf'],
+                },
+            },
+        ],
+    });
+}
+
+save();
+```
+-->
+
