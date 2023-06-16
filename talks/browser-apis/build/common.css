@@ -1396,7 +1396,7 @@ body[data-color-mode*='light'] {
 .Menu_bar__kOpdk {
     height: 5px;
     width: 100%;
-    background-color: var(--palette-1);
+    background-color: var(--palette-1-darken);
     box-shadow: 2px 2px 0 var(--palette-5);
     display: block;
     border-radius: 5px;
