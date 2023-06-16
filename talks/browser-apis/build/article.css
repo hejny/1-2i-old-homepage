@@ -30,7 +30,7 @@ TODO: There should be some indication that content continues below the fold.
 .ArticlePresentation h4,
 .ArticlePresentation h5,
 .ArticlePresentation h6 {
-    display: inline-block;
+    display: block;
     text-align: center;
 }
 
