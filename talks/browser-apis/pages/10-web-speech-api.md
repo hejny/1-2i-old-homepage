@@ -14,7 +14,7 @@ recognition.maxAlternatives = 1;
 recognition.start();
 
 recognition.onresult = function (event) {
-    console.log('You said: ', event.results[0][0].transcript);
+    console.log('You said: '+ event.results[0][0].transcript);
 };
 ```
 
