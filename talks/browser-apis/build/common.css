@@ -1294,6 +1294,7 @@ body[data-color-mode*='light'] {
     left: 0;
     margin-right: 5px;
 
+    display:none;
     font-size: 0.8em;
     opacity: 0.8;
 }
