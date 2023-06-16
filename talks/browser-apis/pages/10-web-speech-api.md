@@ -4,8 +4,6 @@ The Web Speech API provides two distinct areas of functionality — speech recog
 
 ## Speech recognition
 
-The SpeechRecognition interface of the Web Speech API is the controller interface for the recognition service; this also handles the SpeechRecognitionEvent sent from the recognition service.
-
 ```js
 const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
 const recognition = new SpeechRecognition();

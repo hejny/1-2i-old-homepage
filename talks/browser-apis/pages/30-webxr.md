@@ -1,5 +1,25 @@
 # WebXR
 
+Allows developers to create virtual and augmented reality experiences directly in the browser.
+
+```javascript
+navigator.xr.requestSession('immersive-vr').then((session) => {
+// Create and configure your VR scene
+// ...
+session.requestAnimationFrame(render);
+});
+
+function render(timestamp, frame) {
+// Render your VR scene
+// ...
+session.requestAnimationFrame(render);
+}
+```
+
+
+With Babylon.js:
+
+
 ```javascript
 const canvas = document.getElementById('scene');
 const engine = new BABYLON.Engine(canvas, true);
