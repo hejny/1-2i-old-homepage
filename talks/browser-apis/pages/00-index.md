@@ -69,9 +69,9 @@ save();
   if ('Accelerometer' in window) {
     const sensor = new Accelerometer();
     sensor.addEventListener('reading', () => {
-      console.log('Acceleration along the X-axis:', sensor.x);
-      console.log('Acceleration along the Y-axis:', sensor.y);
-      console.log('Acceleration along the Z-axis:', sensor.z);
+      console.log('Acceleration along the X-axis: '+ sensor.x);
+      console.log('Acceleration along the Y-axis: '+ sensor.y);
+      console.log('Acceleration along the Z-axis: '+ sensor.z);
     });
     sensor.start();
   }
