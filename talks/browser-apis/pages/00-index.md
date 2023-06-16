@@ -13,6 +13,11 @@ Now I will talk about the most interesting, unexpected and unusual things you ca
 -   [**File system access API**](60-file-system-access-api.md): Provides a way for web applications to read and write files on a user's device.
 
 ```javascript
+console.log(`Hello`);
+```
+
+<!--
+```javascript
 // Download pdf file
 
 async function save() {
@@ -30,6 +35,7 @@ async function save() {
 
 save();
 ```
+-->
 
 
 
