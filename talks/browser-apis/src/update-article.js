@@ -44,3 +44,35 @@ async function updateArticle() {
 function insertAfter(newNode, existingNode) {
     existingNode.parentNode.insertBefore(newNode, existingNode.nextSibling);
 }
+
+
+(function() {
+  // Store the original console.log function
+  var oldLog = console.log;
+
+  // Override console.log
+  console.log = function(message) {
+    // Call the original console.log function
+    oldLog.apply(console, arguments);
+
+    // Create a pop-up element
+    var popup = document.createElement('div');
+    popup.style.position = 'fixed';
+    popup.style.top = '20px';
+    popup.style.left = '20px';
+    popup.style.padding = '10px';
+    popup.style.backgroundColor = 'rgba(0, 0, 0, 0.8)';
+    popup.style.color = '#fff';
+    popup.style.zIndex = '999999999';
+    popup.innerText = message;
+
+    // Append the pop-up element to the document body
+    document.body.appendChild(popup);
+
+    // Remove the pop-up after a delay
+    setTimeout(function() {
+      popup.remove();
+    }, 2000); // Adjust the delay (in milliseconds) as needed
+  };
+})();
+
