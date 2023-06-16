@@ -14,16 +14,23 @@ recognition.maxAlternatives = 1;
 recognition.start();
 
 recognition.onresult = function (event) {
-    alert('You said: ', event.results[0][0].transcript);
+    console.log('You said: ', event.results[0][0].transcript);
 };
 ```
 
 ## Speech synthesis
 
 
-```
-const utterance = new SpeechSynthesisUtterance(`Hello DevConf 2023`);
-utterance.lang = 'en-US';
+```javascript
+// Create a new instance of SpeechSynthesisUtterance
+const message = new SpeechSynthesisUtterance();
 
-synth.speak(utterance);
+// Set the text that you want to speak
+message.text = "Hello, this is an example of speech synthesis.";
+
+// Set the speech synthesis voice
+message.voice = speechSynthesis.getVoices()[0]; // You can choose a different voice if available
+
+// Speak the message
+speechSynthesis.speak(message);
 ```
