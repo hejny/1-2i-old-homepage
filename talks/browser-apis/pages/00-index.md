@@ -1,13 +1,16 @@
-# Most interesting browser APIs _(in 2023)_
+# Most interesting web APIs
 
 [`DevConf 2023, Brno, Saturday, June 17 • 5:00pm - 5:35pm`](https://devconfcz2023.sched.com/event/1MYeB)
 
-At DevConf 2020 I gave a talk about the most useful browser APIs.
-Now I will talk about the most interesting, unexpected and unusual things you can do directly in the browser app.
+The most interesting, unexpected and unusual things you can do directly in the browser app in 2023.
+_(From my subjective point of view)_
 
+## What is a web API?
 
+There are loooooot of 
+https://developer.mozilla.org/en-US/docs/Web/API
 
-
+I picked:
 
 -   [**Web Speech API**](10-web-speech-api): For using the user's voice to control the web apps.
 -   [**Sensor APIs**](10-web-speech-api): Provides access to different sensors on a user's device, such as an accelerometer or gyroscope.
@@ -16,6 +19,8 @@ Now I will talk about the most interesting, unexpected and unusual things you ca
 -   [**Offscreen Canvas API**](50-offscreen-canvas-api.md): Allows developers to perform graphics operations outside of the main thread, improving performance.
 -   [**File system access API**](60-file-system-access-api.md): Provides a way for web applications to read and write files on a user's device.
 
+
+<!--
 
 <iframe src="https://developer.mozilla.org/en-US/docs/Web/API" style"width:100%; height:2000px"></iframe>
 
