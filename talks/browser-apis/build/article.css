@@ -45,7 +45,7 @@ TODO: There should be some indication that content continues below the fold.
     font-size: 65px;
 
     margin-top: 80px;
-    font-family: 'Orbitron', sans-serif;
+    /*font-family: 'Orbitron', sans-serif;*/
 }
 @media only screen and (max-width: 600px) {
     .ArticlePresentation h1 {
