@@ -34,7 +34,7 @@ async function updateArticle() {
         insertAfter(runButton, codeBlock.parentElement);
 
         runButton.addEventListener('click', () => {
-            eval(codeBlock.innerText);
+            eval(`((async ()=>{${codeBlock.innerText}})())`);
         });
     }
 
