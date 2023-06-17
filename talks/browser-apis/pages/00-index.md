@@ -2,8 +2,16 @@
 
 [`DevConf 2023, Brno, Saturday, June 17 • 5:00pm - 5:35pm`](https://devconfcz2023.sched.com/event/1MYeB)
 
+
 The most interesting, unexpected and unusual things you can do directly in the browser app in 2023.
 _(From my subjective point of view)_
+
+
+![QR](https://api.qrserver.com/v1/create-qr-code/?size=550x550&data=https://ai.hejny.org/talks/browser-apis/)
+
+
+> https://ai.hejny.org/talks/browser-apis/
+
 
 ## What is a web API?
 
