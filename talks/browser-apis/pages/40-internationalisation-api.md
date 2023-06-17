@@ -4,7 +4,11 @@ Provides a way to format dates, times, numbers, currencies, and more.
 
 ```javascript
 const date = new Date();
-const options = { month: 'long', day: 'numeric', year: 'numeric' };
+const options = {
+  month: 'long',
+  day: 'numeric',
+  year: 'numeric'
+};
 const formattedDate = date.toLocaleDateString('en-US', options);
 console.log('Formatted date: '+ formattedDate);
 ```
