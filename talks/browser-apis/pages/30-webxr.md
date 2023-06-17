@@ -17,7 +17,9 @@ session.requestAnimationFrame(render);
 ```
 
 
-With Babylon.js:
+## With Babylon.js:
+
+> Raw API vs Library
 
 
 ```javascript
