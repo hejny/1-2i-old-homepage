@@ -3,8 +3,6 @@
 The Web Speech API provides two distinct areas of functionality — speech recognition, and speech synthesis (also known as text to speech, or tts) — which open up interesting new possibilities for accessibility, and control mechanisms.
 
 
-> Permissions & origin 
-
 
 ## Speech synthesis
 
@@ -31,6 +29,12 @@ speechSynthesis.speak(message);
 
 
 ## Speech recognition
+
+
+
+> Permissions & origin 
+
+
 
 ```js
 const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
