@@ -14,7 +14,10 @@ const message = new SpeechSynthesisUtterance();
 // Set the text that you want to speak
 message.text = `
   Hello Devconf participants,
-  thanks you for attending my talk about browser API,
+  nice to see you at the talk about browser API 
+  such as me - A speech systhesis API,
+
+
   this is an example of such an API - speech synthesis directly in your browser.
   I am looking forward for the following social event party
 `;
