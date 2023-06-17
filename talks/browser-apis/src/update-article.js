@@ -58,8 +58,9 @@ function insertAfter(newNode, existingNode) {
     // Create a pop-up element
     var popup = document.createElement('div');
     popup.style.position = 'fixed';
-    popup.style.top = '20px';
-    popup.style.left = '20px';
+    popup.style.top = '50vh';
+    popup.style.left = '50vw';
+    popup.style.transform = 'translate(-50%,-50%)';
     popup.style.padding = '10px';
     popup.style.backgroundColor = 'rgba(0, 0, 0, 0.8)';
     popup.style.color = '#fff';
