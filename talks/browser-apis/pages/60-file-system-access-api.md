@@ -15,3 +15,7 @@ console.log('File content ' + content);
 
 -   **Pros:** Enables file manipulation and integration with local storage.
 -   **Cons:** Requires user permission and may have limited access to certain file types.
+
+## More
+
+-   [File System Access API on MDN](https://developer.mozilla.org/en-US/docs/Web/API/File_System_Access_API)

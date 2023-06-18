@@ -38,3 +38,9 @@ self.onmessage = function (event) {
 -   **Pros:** Boosts performance by offloading graphics processing to a separate thread.
 -   **Cons:** Requires careful synchronization between the main thread and offscreen rendering.
 -   _Interesting Fact:_ The Offscreen Canvas API is particularly useful for complex visualizations and resource-intensive graphics rendering.
+
+## More
+
+-   [OffscreenCanvas on MDN](https://developer.mozilla.org/en-US/docs/Web/API/OffscreenCanvas)
+-   [Canvas API on MDN](https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API)
+-   [Web Workers API on MDN](https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API)

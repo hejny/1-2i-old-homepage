@@ -44,3 +44,8 @@ recognition.onresult = function (event) {
     console.log('You said: ' + event.results[0][0].transcript);
 };
 ```
+
+## More
+
+-   [SpeechSynthesis on MDN](https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesis)
+-   [SpeechRecognition on MDN](https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognition)

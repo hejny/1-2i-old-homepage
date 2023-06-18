@@ -4,23 +4,21 @@ Allows developers to create virtual and augmented reality experiences directly i
 
 ```javascript
 navigator.xr.requestSession('immersive-vr').then((session) => {
-// Create and configure your VR scene
-// ...
-session.requestAnimationFrame(render);
+    // Create and configure your VR scene
+    // ...
+    session.requestAnimationFrame(render);
 });
 
 function render(timestamp, frame) {
-// Render your VR scene
-// ...
-session.requestAnimationFrame(render);
+    // Render your VR scene
+    // ...
+    session.requestAnimationFrame(render);
 }
 ```
-
 
 ## With Babylon.js:
 
 > Raw API vs Library
-
 
 ```javascript
 const canvas = document.getElementById('scene');
@@ -61,3 +59,11 @@ window.addEventListener('resize', function () {
         background-color: #111;
     }
 </style>
+
+## More
+
+-   [WebXR Device API on MDN](https://developer.mozilla.org/en-US/docs/Web/API/WebXR_Device_API)
+-   [Babylonjs library](https://www.babylonjs.com/)
+-   [Threejs library](https://threejs.org/)
+-   [A-frame library](https://aframe.io/)
+-   [3D/VR Sample in Babylon](https://codepen.io/hejny/pen/PLjpZG)
