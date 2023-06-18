@@ -27,6 +27,13 @@ async function updateArticle() {
 
     // Note: Go through all the code blocks and add run button to them
     for (const codeBlock of Array.from(document.querySelectorAll('pre code'))) {
+        let code = codeBlock.innerText;
+        if (code.includes('no-run')) {
+            // TODO: code = code.split('// no-run').join('');
+            // TODO: codeBlock.innerText = code;
+            continue;
+        }
+
         const runButton = document.createElement('button');
         runButton.innerText = 'Run';
         runButton.classList.add('button');
@@ -39,7 +46,7 @@ async function updateArticle() {
             ((async ()=>{
                 
                 console.log = mockConsoleLog();
-                ${codeBlock.innerText}
+                ${code}
                 
             })())`);
         });
