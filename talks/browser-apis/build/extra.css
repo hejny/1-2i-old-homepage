@@ -1,10 +1,18 @@
 .QRLink {
     position: absolute;
     top: 20px;
-    left: 20px;
+    right: 20px;
 
     display: block;
 
     background-color: var(--palette-0);
+
+    /*transform: scale(0.7) translate(20%, 0);*/
     /*border: 2px solid var(--palette-1);*/
+}
+
+@media only screen and (max-width: 900px) {
+    .QRLink {
+        display: none;
+    }
 }
