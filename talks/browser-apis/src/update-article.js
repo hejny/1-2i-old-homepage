@@ -34,7 +34,14 @@ async function updateArticle() {
         insertAfter(runButton, codeBlock.parentElement);
 
         runButton.addEventListener('click', () => {
-            eval(`((async ()=>{${codeBlock.innerText}})())`);
+            eval(`
+            
+            ((async ()=>{
+                
+                console.log = mockConsoleLog();
+                ${codeBlock.innerText}
+                
+            })())`);
         });
     }
 
@@ -45,35 +52,31 @@ function insertAfter(newNode, existingNode) {
     existingNode.parentNode.insertBefore(newNode, existingNode.nextSibling);
 }
 
+const originalConsoleLog = console.log;
 
-(function() {
-  // Store the original console.log function
-  var oldLog = console.log;
+function mockConsoleLog() {
+    return function (message) {
+        // Call the original console.log function
+        originalConsoleLog.apply(console, arguments);
 
-  // Override console.log
-  console.log = function(message) {
-    // Call the original console.log function
-    oldLog.apply(console, arguments);
+        // Create a pop-up element
+        var popup = document.createElement('div');
+        popup.style.position = 'fixed';
+        popup.style.top = '50vh';
+        popup.style.left = '50vw';
+        popup.style.transform = 'translate(-50%,-50%)';
+        popup.style.padding = '10px';
+        popup.style.backgroundColor = 'rgba(0, 0, 0, 0.8)';
+        popup.style.color = '#fff';
+        popup.style.zIndex = '999999999';
+        popup.innerText = message;
 
-    // Create a pop-up element
-    var popup = document.createElement('div');
-    popup.style.position = 'fixed';
-    popup.style.top = '50vh';
-    popup.style.left = '50vw';
-    popup.style.transform = 'translate(-50%,-50%)';
-    popup.style.padding = '10px';
-    popup.style.backgroundColor = 'rgba(0, 0, 0, 0.8)';
-    popup.style.color = '#fff';
-    popup.style.zIndex = '999999999';
-    popup.innerText = message;
+        // Append the pop-up element to the document body
+        document.body.appendChild(popup);
 
-    // Append the pop-up element to the document body
-    document.body.appendChild(popup);
-
-    // Remove the pop-up after a delay
-    setTimeout(function() {
-      popup.remove();
-    }, 2000); // Adjust the delay (in milliseconds) as needed
-  };
-})();
-
+        // Remove the pop-up after a delay
+        setTimeout(function () {
+            popup.remove();
+        }, 2000); // Adjust the delay (in milliseconds) as needed
+    };
+}
