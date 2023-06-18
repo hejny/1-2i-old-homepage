@@ -1,0 +1,10 @@
+.QRLink {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+
+    display: block;
+
+    background-color: var(--palette-0);
+    /*border: 2px solid var(--palette-1);*/
+}

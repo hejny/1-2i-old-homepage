@@ -2,29 +2,22 @@
 
 [`DevConf 2023, Brno, Saturday, June 17 • 5:00pm - 5:35pm`](https://devconfcz2023.sched.com/event/1MYeB)
 
-
 The most interesting, unexpected and unusual things you can do directly in the browser app in 2023.
 _(From my subjective point of view)_
 
-
-![QR](https://api.qrserver.com/v1/create-qr-code/?size=550x550&data=https://ai.hejny.org/talks/browser-apis/)
-
-
-> https://ai.hejny.org/talks/browser-apis/
-
+<div class="QRLink"><img src="https://api.qrserver.com/v1/create-qr-code/?size=250x250&amp;data=https://ai.hejny.org/talks/browser-apis/" alt="QR">
+https://ai.hejny.org/talks/browser-apis/
+</div>
 
 ## What is a web API?
 
-
 > Web (browser) API vs API service
-
-
 
 > When writing code for the Web, there are a large number of Web APIs available. Below is a link to of all the APIs and interfaces (object types) that you may be able to use while developing your Web app or site.
 
 > Web APIs are typically used with JavaScript, although this doesn't always have to be the case.
 
-There are a **looooooooooooooooooot** of them 
+There are a **looooooooooooooooooot** of them
 https://developer.mozilla.org/en-US/docs/Web/API
 
 I picked:
@@ -35,4 +28,3 @@ I picked:
 -   [**Internationalisation API**](40-internationalisation-api.md): Provides a way to format dates, times, numbers, currencies, and more.
 -   [**Offscreen Canvas API**](50-offscreen-canvas-api.md): Allows developers to perform graphics operations outside of the main thread, improving performance.
 -   [**File system access API**](60-file-system-access-api.md): Provides a way for web applications to read and write files on a user's device.
-
