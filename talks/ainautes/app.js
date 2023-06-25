@@ -7,6 +7,8 @@ const engine = new BABYLON.Engine(canvas, true);
 // Create a scene
 const scene = new BABYLON.Scene(engine);
 
+scene.clearColor = new BABYLON.Color4(0, 0, 0, 0);
+
 // Create a camera
 const camera = new BABYLON.ArcRotateCamera('camera', 0, 0, 10, BABYLON.Vector3.Zero(), scene);
 camera.attachControl(canvas, false);
@@ -78,10 +80,10 @@ ribbonMaterial.backFaceCulling = false;
 ribbonMaterial.wireframe = true;
 ribbon.material = ribbonMaterial;
 
-/*/
+/**/
 // Rotate the the ribbon
 scene.registerBeforeRender(function () {
-    ribbon.rotation.y += 0.01;
+    ribbon.rotation.y -= 0.01;
 });
 /**/
 
@@ -197,7 +199,7 @@ plotTorus.range = [0, Math.PI * 2];
 function plotWaves(t, u, v) {
     const x = u;
     const y = v;
-    const z = Math.sin(u * 2 + t / 100) / 2 + Math.cos(v * 2 + t / 100) / 2;
+    const z = Math.sin(u * 2 + t / 30) / 2 + Math.cos(v * 2 + t / 30) / 2;
     return [x, y, z];
 }
 plotWaves.range = [-3, 3];
