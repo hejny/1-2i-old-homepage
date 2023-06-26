@@ -20,12 +20,17 @@ scene.debugLayer.show();
 
 //==============================================
 
+function plotPoint(t, u, v) {
+    return [0, 0, 0];
+}
+plotPoint.range = [0, 1];
+
 /**/
 // Create a ribbon mesh for black hole topology
 let ribbon = BABYLON.MeshBuilder.CreateRibbon(
     'ribbon',
     {
-        pathArray: generateRibbonPath(plotSphere, 0),
+        pathArray: generateRibbonPath(plotPoint, 0),
         sideOrientation: BABYLON.Mesh.DOUBLESIDE,
         updatable: true,
     },
@@ -34,7 +39,7 @@ let ribbon = BABYLON.MeshBuilder.CreateRibbon(
 
 // Note: Detect last plot function in window scope
 const plotFunctionNames = Object.keys(window).filter(
-    (key) => key.startsWith('plot') && typeof window[key] === 'function',
+    (key) => key !== 'plotPoint' && key.startsWith('plot') && typeof window[key] === 'function',
 );
 
 // Update the ribbon mesh each frame
