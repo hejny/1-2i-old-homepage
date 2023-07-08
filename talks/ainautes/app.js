@@ -1,3 +1,4 @@
+
 // Get the canvas element
 const canvas = document.getElementById('renderCanvas');
 
@@ -33,6 +34,8 @@ let ribbon = BABYLON.MeshBuilder.CreateRibbon(
         pathArray: generateRibbonPath(plotPoint, 0),
         sideOrientation: BABYLON.Mesh.DOUBLESIDE,
         updatable: true,
+        closeArray: true, // add this parameter to close the ribbon between the last and first paths
+        closePath: true // add this parameter to close each path between the last and first points
     },
     scene,
 );
@@ -53,6 +56,8 @@ scene.registerBeforeRender(function () {
             pathArray: generateRibbonPath(plot, t++),
             sideOrientation: BABYLON.Mesh.DOUBLESIDE,
             instance: ribbon,
+            closeArray: true, // keep this parameter consistent with the initial creation
+            closePath: true // keep this parameter consistent with the initial creation
         },
         scene,
     );
@@ -109,3 +114,4 @@ engine.runRenderLoop(function () {
 window.addEventListener('resize', function () {
     engine.resize();
 });
+

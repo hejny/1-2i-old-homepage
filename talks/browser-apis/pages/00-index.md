@@ -5,8 +5,8 @@
 The most interesting, unexpected and unusual things you can do directly in the browser app in 2023.
 _(From my subjective point of view)_
 
-<div class="QRLink"><img src="https://api.qrserver.com/v1/create-qr-code/?size=250x250&amp;data=https://ai.hejny.org/talks/browser-apis/" alt="QR">
-<a href="https://ai.hejny.org/talks/browser-apis/">https://ai.hejny.org/talks/browser-apis/</a><br/>
+<div class="QRLink"><img src="https://api.qrserver.com/v1/create-qr-code/?size=250x250&amp;data=https://1-2i.com/talks/browser-apis/" alt="QR">
+<a href="https://1-2i.com/talks/browser-apis/">https://1-2i.com/talks/browser-apis/</a><br/>
 <a href="https://github.com/hejny/art-tech-fusion/blob/main/talks/browser-apis/pages">GitHub</a>
 </div>
 

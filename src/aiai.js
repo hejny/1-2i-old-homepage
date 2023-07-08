@@ -24,7 +24,7 @@ async function activateGalleryElement(element) {
                     <div class="placeholder"></div>
                 </div>
             </div>
-            <a href="https://app.ai.hejny.org/?home=https://ai.hejny.org/" class="button">More</a>
+            <a href="https://app.1-2i.com/?home=https://1-2i.com/" class="button">More</a>
         </div>
     `;
 
@@ -45,9 +45,9 @@ async function activateGalleryElement(element) {
 
     const itemsHtml = pickedWallpapers.map(
         ({ id, primaryColor }) => `
-            <a href="https://app.ai.hejny.org/showcase/${id}">
+            <a href="https://app.1-2i.com/showcase/${id}">
                 <iframe
-                    src="https://app.ai.hejny.org/showcase/${id}?mode=preview"
+                    src="https://app.1-2i.com/showcase/${id}?mode=preview"
                     allowtransparency="false"
                     scrolling="no"
                     frameborder="0"
@@ -65,7 +65,7 @@ async function activateGalleryElement(element) {
                     ${itemsHtml.join('\n\n\n')}
                 </div>
             </div>
-            <a href="https://app.ai.hejny.org/?home=https://ai.hejny.org/" class="button">More</a>
+            <a href="https://app.1-2i.com/?home=https://1-2i.com/" class="button">More</a>
         </div>
     `;
 
